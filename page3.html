@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Istanbul — Cat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Lexend+Deca:wght@100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --accent: #4a8c4a;
+      --accent-dark: #336633;
+    }
+
+    body {
+      background: #ffffff;
+      min-height: 100vh;
+      font-family: 'Cormorant Garamond', serif;
+      overflow-x: hidden;
+    }
+
+    .page {
+      min-height: 100vh;
+      padding: 5vw;
+      position: relative;
+    }
+
+    /* --- SENTENCE scattered in three parts --- */
+    .sentence {
+      font-family: "PT Sans", sans-serif;
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.4;
+      color: var(--accent);
+      position: absolute;
+    }
+
+    .s-top-left {
+      top: 5vw;
+      left: 5vw;
+      font-size: clamp(0.8rem, 1.4vw, 1.1rem);
+      font-weight: 400;
+    }
+
+    /* Middle fragment — large, overlapping photos */
+    .s-middle {
+      top: 52%;
+      left: 5vw;
+      font-size: clamp(1.4rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      font-style: normal;
+      z-index: 3;
+    }
+
+    .s-bottom-right {
+      bottom: 12vw;
+      right: 5vw;
+      font-size: clamp(0.75rem, 1.3vw, 1rem);
+      font-weight: 400;
+      font-family: "PT Sans", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      letter-spacing: 0.04em;
+    }
+
+    /* --- COLLAGE --- */
+    .collage {
+      position: relative;
+      margin-top: 6rem;
+      min-height: 65vw;
+    }
+
+    .photo {
+      position: absolute;
+      object-fit: cover;
+    }
+
+    /* Tabby cat — left/center */
+    .p3-photo-tabby {
+      width: clamp(220px, 38vw, 530px);
+      height: clamp(170px, 28vw, 390px);
+      left: 12%;
+      top: 0;
+      z-index: 1;
+    }
+
+    /* White cat — right, overlapping */
+    .p3-photo-white {
+      width: clamp(210px, 38vw, 530px);
+      height: clamp(200px, 30vw, 420px);
+      right: 3%;
+      top: 18%;
+      z-index: 2;
+    }
+
+    /* --- BUTTON --- */
+    .button-area {
+      position: absolute;
+      bottom: 5vw;
+      left: 5vw;
+    }
+
+    .btn {
+      font-family: "PT Sans", sans-serif;
+      font-weight: 400;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      padding: 0.5em 1.3em;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      background: var(--accent);
+      color: #ffffff;
+      transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55), background 0.2s;
+    }
+
+    /* Hover: slinks sideways like a cat deciding whether to care */
+    .btn:hover {
+      transform: translateX(18px) rotate(-3deg);
+      background: var(--accent-dark);
+    }
+
+    @media (max-width: 600px) {
+      .collage { min-height: 110vw; }
+      .p3-photo-tabby { width: 70vw; height: 50vw; left: 5%; }
+      .p3-photo-white { width: 65vw; height: 50vw; right: 2%; top: 45%; }
+      .s-middle { top: 48%; font-size: 1.5rem; }
+      .s-bottom-right { bottom: 16vw; font-size: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <span class="sentence s-top-left">Every ruin had a story;</span>
+
+    <div class="collage">
+      <!-- REPLACE src with your actual image paths -->
+      <img class="photo p3-photo-tabby" src="images/cat-tabby.jpg" alt="Tabby cat in Istanbul">
+      <img class="photo p3-photo-white" src="images/cat-white.jpg" alt="White cat in Istanbul">
+    </div>
+
+    <span class="sentence s-middle">every story had a cat;</span>
+    <span class="sentence s-bottom-right">every cat had somewhere better to be.</span>
+
+    <div class="button-area">
+      <a class="btn" href="page4.html">Cat</a>
+    </div>
+
+  </div>
+</body>
+</html>

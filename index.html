@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Istanbul</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Lexend+Deca:wght@100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #ffffff;
+      min-height: 100vh;
+      font-family: "PT Sans", sans-serif;
+      font-weight: 400;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .page {
+      min-height: 100vh;
+      padding: 5vw;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* --- TITLE --- */
+    .title-word {
+      font-family: "PT Sans", sans-serif;
+      font-weight: 400;
+      font-style: bold;
+      font-size: clamp(4rem, 14vw, 13rem);
+      color: #CC1010;
+      line-height: 0.9;
+      letter-spacing: 0.02em;
+      position: relative;
+      z-index: 2;
+      margin-bottom: 2rem;
+    }
+
+    /* --- COLLAGE AREA --- */
+    .collage {
+      position: relative;
+      flex: 1;
+      min-height: 55vw;
+      max-height: 70vh;
+    }
+
+    .photo {
+      position: absolute;
+      object-fit: cover;
+    }
+
+    /* Page 1 photo layout — flag building, centered */
+    .p1-photo-main {
+      width: clamp(320px, 58vw, 820px);
+      height: clamp(220px, 40vw, 560px);
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+    }
+
+    /* --- SENTENCE (scattered) --- */
+    .sentence {
+      font-family: "PT Sans", sans-serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: clamp(0.85rem, 1.6vw, 1.25rem);
+      line-height: 1.4;
+      color: #CC1010;
+      position: absolute;
+      max-width: 420px;
+    }
+
+    .sentence.bottom-right {
+      bottom: -2rem;
+      right: 0;
+    }
+
+    /* --- BUTTON AREA --- */
+    .button-area {
+      margin-top: auto;
+      padding-top: 3rem;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .btn {
+      font-family: "PT Sans", sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      padding: 0.55em 1.3em;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.2s;
+      /* Page 1 accent: red */
+      background: #CC1010;
+      color: #ffffff;
+    }
+
+    /* Page 1 hover: button expands outward like it owns the space */
+    .btn:hover {
+      transform: scale(1.25) translateX(6px);
+      background: #a80d0d;
+    }
+
+    /* --- MOBILE FIRST adjustments --- */
+    @media (max-width: 600px) {
+      .collage { min-height: 80vw; }
+      .p1-photo-main { width: 90vw; height: 55vw; left: 5vw; transform: none; }
+      .sentence.bottom-right { bottom: -3.5rem; right: 0; font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="title-word">ISTANBUL</div>
+
+    <div class="collage">
+      <!-- REPLACE src with your actual image path, e.g. images/flag-building.jpg -->
+      <img class="photo p1-photo-main" src="images/flag-building.jpg" alt="Istanbul flag building at night">
+
+      <span class="sentence bottom-right">
+        loud, golden, absolutely uninterested in your schedule.
+      </span>
+    </div>
+
+    <div class="button-area">
+      <a class="btn" href="page2.html">Loud</a>
+    </div>
+
+  </div>
+</body>
+</html>

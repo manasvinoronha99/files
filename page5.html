@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Istanbul — Summer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Lexend+Deca:wght@100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --accent: #222222;
+    }
+
+    body {
+      background: #ffffff;
+      min-height: 100vh;
+      font-family: "PT Sans", sans-serif;
+      font-weight: 400;
+      overflow-x: hidden;
+    }
+
+    .page {
+      min-height: 100vh;
+      padding: 5vw;
+      position: relative;
+    }
+
+    .sentence {
+      font-family: "PT Sans", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      line-height: 1.4;
+      color: var(--accent);
+      position: absolute;
+    }
+
+    .s-top-right {
+      top: 9vw;
+      right: 8vw;
+      font-size: clamp(0.9rem, 1.8vw, 1.4rem);
+      font-weight: 300;
+      max-width: 340px;
+      text-align: right;
+    }
+
+    .s-bottom-right {
+      bottom: 18vw;
+      right: 8vw;
+      font-size: clamp(0.85rem, 1.5vw, 1.2rem);
+      font-weight: 300;
+      font-style: italic;
+    }
+
+    .collage {
+      position: relative;
+      margin-top: 2rem;
+      min-height: 70vw;
+    }
+
+    .photo {
+      position: absolute;
+      object-fit: cover;
+    }
+
+    .p5-photo-street {
+      width: clamp(220px, 40vw, 580px);
+      height: clamp(260px, 50vw, 720px);
+      left: 0;
+      top: 0;
+      z-index: 1;
+    }
+
+    .p5-photo-selfie {
+      width: clamp(200px, 36vw, 500px);
+      height: clamp(180px, 30vw, 420px);
+      left: 28%;
+      top: 18%;
+      z-index: 2;
+    }
+
+    .button-area {
+      position: absolute;
+      bottom: 5vw;
+      right: 5vw;
+    }
+
+    .btn {
+      font-family: "PT Sans", sans-serif;
+      font-weight: 400;
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+      padding: 0.55em 1.5em;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      background: var(--accent);
+      color: #ffffff;
+      transition: transform 0.6s ease, opacity 0.4s ease, background 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.12);
+      opacity: 0.85;
+      background: #444;
+    }
+
+    @media (max-width: 600px) {
+      .collage { min-height: 115vw; }
+      .p5-photo-street { width: 62vw; height: 80vw; }
+      .p5-photo-selfie { width: 65vw; height: 50vw; left: 22%; top: 42%; }
+      .s-top-right { top: 3rem; right: 5vw; font-size: 0.85rem; max-width: 200px; }
+      .s-bottom-right { bottom: 22vw; right: 5vw; font-size: 0.8rem; }
+      .button-area { right: 5vw; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <span class="sentence s-top-right">Two summers later—</span>
+
+    <div class="collage">
+      <img class="photo p5-photo-street" src="images/night-street.jpg" alt="Istanbul night street with Galata Tower">
+      <img class="photo p5-photo-selfie" src="images/selfie.jpg" alt="Sibling selfie in Istanbul">
+    </div>
+
+    <span class="sentence s-bottom-right">still considering.</span>
+
+    <div class="button-area">
+      <a class="btn" href="index.html">Summer</a>
+    </div>
+
+  </div>
+</body>
+</html>

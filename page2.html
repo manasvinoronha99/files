@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Istanbul — Free</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Lexend+Deca:wght@100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --accent: #D4830A;
+      --accent-dark: #a8660a;
+    }
+
+    body {
+      background: #ffffff;
+      min-height: 100vh;
+      font-family: 'Cormorant Garamond', serif;
+      overflow-x: hidden;
+    }
+
+    .page {
+      min-height: 100vh;
+      padding: 5vw;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* --- SENTENCE fragments scattered --- */
+    .sentence {
+      font-family: "PT Sans", sans-serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: clamp(0.9rem, 1.7vw, 1.35rem);
+      line-height: 1.4;
+      color: var(--accent);
+      position: absolute;
+    }
+
+    .s-top-left {
+      top: 5vw;
+      left: 5vw;
+    }
+
+    .s-bottom-right {
+      bottom: 14vw;
+      right: 5vw;
+      font-size: clamp(1.3rem, 3vw, 2.4rem);
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    /* --- COLLAGE --- */
+    .collage {
+      position: relative;
+      flex: 1;
+      margin-top: 5rem;
+      min-height: 50vw;
+    }
+
+    .photo {
+      position: absolute;
+      object-fit: cover;
+    }
+
+    /* Centered baklava shop photo */
+    .p2-photo-main {
+      width: clamp(300px, 55vw, 780px);
+      height: clamp(200px, 36vw, 510px);
+      left: 50%;
+      transform: translateX(-30%);
+      top: 0;
+    }
+
+    /* --- BUTTON --- */
+    .button-area {
+      position: absolute;
+      bottom: 5vw;
+      left: 5vw;
+    }
+
+    .btn {
+      font-family: "PT Sans", sans-serif;
+      font-weight: 400;
+      font-size: 0.95rem;
+      font-style: italic;
+      letter-spacing: 0.04em;
+      padding: 0.55em 1.4em;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      background: var(--accent);
+      color: #ffffff;
+      transition: transform 0.35s ease, letter-spacing 0.35s ease, background 0.2s;
+    }
+
+    /* Hover: letter-spacing expands like a generous pour of tea */
+    .btn:hover {
+      transform: scaleX(1.15);
+      letter-spacing: 0.18em;
+      background: var(--accent-dark);
+    }
+
+    @media (max-width: 600px) {
+      .collage { min-height: 85vw; }
+      .p2-photo-main { width: 88vw; height: 56vw; left: 6vw; transform: none; }
+      .s-bottom-right { bottom: 20vw; font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <span class="sentence s-top-left">The tea was free, the conversation was free…</span>
+
+    <div class="collage">
+      <!-- REPLACE src with your actual image path, e.g. images/baklava.jpg -->
+      <img class="photo p2-photo-main" src="images/baklava.jpg" alt="Faruk Güllüoğlu baklava shop">
+    </div>
+
+    <span class="sentence s-bottom-right">nothing else was free.</span>
+
+    <div class="button-area">
+      <a class="btn" href="page3.html">Conversation</a>
+    </div>
+
+  </div>
+</body>
+</html>

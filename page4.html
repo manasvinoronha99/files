@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Istanbul — Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Lexend+Deca:wght@100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --accent: #C8820A;
+      --accent-dark: #9e6608;
+    }
+
+    body {
+      background: #ffffff;
+      min-height: 100vh;
+      font-family: 'Cormorant Garamond', serif;
+      overflow-x: hidden;
+    }
+
+    .page {
+      min-height: 100vh;
+      padding: 5vw;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* --- SENTENCE at top left --- */
+    .sentence-top {
+      font-family: "PT Sans", sans-serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: clamp(1rem, 2vw, 1.6rem);
+      color: var(--accent);
+      max-width: 480px;
+      line-height: 1.35;
+      margin-bottom: 2rem;
+    }
+
+    /* --- COLLAGE --- */
+    .collage {
+      position: relative;
+      flex: 1;
+      min-height: 55vw;
+    }
+
+    .photo {
+      position: absolute;
+      object-fit: cover;
+    }
+
+    /* Small sunset silhouette — top left */
+    .p4-photo-small {
+      width: clamp(160px, 26vw, 370px);
+      height: clamp(110px, 18vw, 260px);
+      left: 0;
+      top: 0;
+      z-index: 2;
+    }
+
+    /* Large wide sunset — offset right, overlapping */
+    .p4-photo-large {
+      width: clamp(280px, 60vw, 860px);
+      height: clamp(200px, 42vw, 600px);
+      right: 0;
+      top: 12%;
+      z-index: 1;
+    }
+
+    /* --- BUTTON --- */
+    .button-area {
+      position: absolute;
+      bottom: 5vw;
+      left: 5vw;
+    }
+
+    .btn {
+      font-family: "PT Sans", sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.55em 1.5em;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      background: var(--accent);
+      color: #ffffff;
+      transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), background 0.2s;
+    }
+
+    /* Hover: snaps decisively upward — going home has a certain finality */
+    .btn:hover {
+      transform: translateY(-6px) scaleY(1.08);
+      background: var(--accent-dark);
+    }
+
+    @media (max-width: 600px) {
+      .collage { min-height: 95vw; }
+      .p4-photo-small { width: 45vw; height: 30vw; }
+      .p4-photo-large { width: 88vw; height: 55vw; right: 0; top: 38%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <p class="sentence-top">
+      I watched the sun set over the Bosphorus and briefly considered not going home.
+    </p>
+
+    <div class="collage">
+      <!-- REPLACE src with your actual image paths -->
+      <img class="photo p4-photo-small" src="images/sunset-small.jpg" alt="Sunset silhouette over Bosphorus">
+      <img class="photo p4-photo-large" src="images/sunset-large.jpg" alt="Wide Bosphorus sunset">
+    </div>
+
+    <div class="button-area">
+      <a class="btn" href="page5.html">Home</a>
+    </div>
+
+  </div>
+</body>
+</html>
